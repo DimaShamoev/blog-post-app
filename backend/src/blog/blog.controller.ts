@@ -14,17 +14,17 @@ export class BlogController {
 
     @Get(':id')
     findById(@Param('id') id: number): IBlog {
-        return this.blogService.findById(+id)
+        return this.blogService.findById(+id);
     }
 
     @Post()
     createBlog(@Body() blogData: IUserBlog): IBlog {
-        return this.blogService.createBlog(blogData)
+        return this.blogService.createBlog(blogData);
     }
 
     @Delete(':id')
     deleteBlog(@Param('id') id: number ): IBlog {
-        return this.blogService.deleteBlog(+id)
+        return this.blogService.deleteBlog(+id);
     }
 
 }
