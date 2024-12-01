@@ -1,19 +1,37 @@
 import React from "react";
+import axios from "axios";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { InputsDto } from "../BlogDto/InputsDto";
 
 const BlogPostForm: React.FunctionComponent = () => {
+
+    const { register, handleSubmit, reset, formState: {errors} } = useForm<InputsDto>();
+
+    const onSubmit: SubmitHandler<InputsDto> = async (data) => {
+        try {
+            await axios.post("http://localhost:3000/blog", data)
+            reset()
+            alert("Blog Posted Successfully");
+        } catch (err) {
+            alert(`Can't Post Blog: ${err}`)
+        }
+    };
+
+
     return (
         <div className="blog-post-form">
             <div className="container">
                 <div className="form-wrapper">
-                    <form>
+                    <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="input-block">
                             <span>Author Name</span>
                             <input
                                 className="blog-input"
                                 type="text"
-                                name="user"
                                 placeholder="Enter Blog Author"
+                                {...register("author", { required: "This Field Required" })}
                             />
+                            {errors.author && <p className="input-error-message">{errors.author.message}</p>}
                         </div>
 
                         <div className="input-block">
@@ -21,18 +39,20 @@ const BlogPostForm: React.FunctionComponent = () => {
                             <input
                                 className="blog-input"
                                 type="text"
-                                name="title"
                                 placeholder="Enter Blog Title"
+                                {...register("title", { required: "This Field Required" })}
                             />
+                            {errors.title && <p className="input-error-message">{errors.title.message}</p>}
                         </div>
 
                         <div className="input-block">
                             <span>Blog content</span>
                             <textarea
                                 className="blog-input"
-                                name="content"
                                 placeholder="Enter Blog Content"
+                                {...register("content", { required: "This Field Required" })}
                             />
+                            {errors.content && <p className="input-error-message">{errors.content.message}</p>}
                         </div>
 
                         <div className="submit-btn">

@@ -1,5 +1,5 @@
 export interface IUserBlog {
-    author: string,
+    author: string
     title: string
     content: string
 }
