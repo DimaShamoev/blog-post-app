@@ -41,6 +41,7 @@ $ npm install
 ```
 
 3.Run App
+- Client
 ```bash
 $ cd backend
 $ npm run start:dev
