@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
+import BlogPostForm from "./components/BlogPostForm";
 
 const App: React.FunctionComponent = () => {
+    return (
+        <div className="App">
+            <BlogPostForm />
+        </div>
+    );
+};
 
-  return (
-    <div className='App'>
-        
-    </div>
-  )
-}
-
-export default App
+export default App;

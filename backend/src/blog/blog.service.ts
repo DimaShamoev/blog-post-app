@@ -18,6 +18,7 @@ export class BlogService {
     createBlog(blogData: IUserBlog): IBlog {
         const newBlog: IBlog = {
             id: this.currentID++,
+            date: `${new Date().getDate() < 10 ? '0' + new Date().getDate() : new Date().getDate()}/${new Date().getMonth() + 1}/${new Date().getFullYear()}`, 
             ...blogData
         }
 
