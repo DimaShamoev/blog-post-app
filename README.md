@@ -33,11 +33,13 @@ $ git clonehttps://github.com/DimaShamoev/blog-post-app.git
 ```bash
 $ cd backend
 $ npm install
+$ yarn
 ```
 - Client
 ```bash
 $ cd frontend
 $ npm install
+$ yarn
 ```
 
 3.Run App

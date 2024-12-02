@@ -1,0 +1,48 @@
+.home-main {
+    background-color: #fff1d0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+        min-height: 10svh;
+        overflow: hidden;
+
+    }
+
+    .main-banner-block {
+        min-height: 77svh;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .main-banner-text {
+            width: 530px;
+            max-width: 100%;
+            .banner-first-text {
+                font-size: 60px;
+                font-weight: 700;
+                line-height: 1.2;
+            }
+            .banner-secondary-text {
+                font-size: 35px;
+                font-weight: 300;
+            }
+
+        }
+
+        .main-banner-img img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+        } 
+    }
+
+    .footer {
+        overflow: hidden;
+        height: 12svh;
+    }
+
+}
