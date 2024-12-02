@@ -43,6 +43,7 @@ $ yarn
 ```
 
 3.Run App
+- Server
 ```bash
 $ cd backend
 $ npm run start:dev
