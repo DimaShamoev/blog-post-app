@@ -1,31 +1,39 @@
 import React from "react";
-import { MdMenu } from "react-icons/md";
+import { BsPencilSquare } from "react-icons/bs";
+import { IoMenu, IoSearch } from "react-icons/io5";
+import useAside from "../Hooks/UseAside";
 
 const Header: React.FunctionComponent = () => {
+    const { asideState, setAsideState } = useAside()
+    console.log(asideState)
+
     return (
-        <header className="no-auth-header">
-            <div className="small-container">
-                <div className="no-auth-header-wrapper">
-                    <div className="logo-block">
-                        <a href="#">SPACEBLOG</a>
+        <header className="header">
+            <div className="container">
+                <div className="header-wrapper">
+                    <div className="header-left-side">
+                        <div className="header-logo">
+                            <a href="#">SpaceBlog</a>
+                        </div>
+                        <div className="header-search">
+                            <span>
+                                <IoSearch />
+                            </span>
+                            <input type="text" placeholder="Search" />
+                        </div>
                     </div>
-                    <div className="navigation-block">
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a href="#">Write</a>
-                                </li>
-                                <li>
-                                    <a href="#">Sign In</a>
-                                </li>
-                                <li className="no-auth-header-start-btn">
-                                    <a href="#">Get Started</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div className="menu-btn">
-                        <MdMenu />
+                    <div className="header-right-side">
+                        <div className="write-btn">
+                            <a href="#">
+                                <BsPencilSquare />
+                                <span>Write</span>
+                            </a>
+                        </div>
+                        <div className="user-profile">PFP</div>
+                        
+                        <div className="menu-btn" onClick={setAsideState}>
+                            <IoMenu />
+                        </div>
                     </div>
                 </div>
             </div>

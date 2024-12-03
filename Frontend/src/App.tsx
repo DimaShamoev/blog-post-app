@@ -1,4 +1,6 @@
 import React from "react";
+import Home from "./Pages/Home/Home";
+import Header from "./components/Header";
 // import MainPage from "./Pages/MainPage/MainPage";
 // import BlogPostForm from "./components/BlogPostForm";
 // import BlogsList from "./components/BlogsList";
@@ -27,6 +29,9 @@ const App: React.FunctionComponent = () => {
                     -custom, not clerk
             
             */}
+
+            <Header />
+            <Home />
 
         </div>
     );
