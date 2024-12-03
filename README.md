@@ -62,3 +62,6 @@ $ npm run dev
 - Implement **Routing**
 - Add **sorting**
 - Add **Users Interactions**
+
+### Temporarily
+Еhe project is considered empty 😶‍🌫️🤦🏻‍♂️
