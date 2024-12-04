@@ -1,6 +1,7 @@
 import React from "react";
-import Home from "./Pages/Home/Home";
-import Header from "./components/Header";
+import CreateBlog from "./Pages/CreateBlog/CreateBlog";
+// import Home from "./Pages/Home/Home";
+// import Header from "./components/Header";
 // import MainPage from "./Pages/MainPage/MainPage";
 // import BlogPostForm from "./components/BlogPostForm";
 // import BlogsList from "./components/BlogsList";
@@ -30,8 +31,16 @@ const App: React.FunctionComponent = () => {
             
             */}
 
-            <Header />
-            <Home />
+            {/* 
+                Authorized Main Page
+                <Header />
+                <Home />
+            */}
+
+            {/* 
+                Blog Writing Page
+            */}
+            <CreateBlog />
             
         </div>
     );

@@ -1,0 +1,121 @@
+.header {
+    .header-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 10px 0;
+
+        .logo a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .profile-pic {
+            height: 40px;
+            width: 40px;
+            background-color: yellow;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+}
+
+.main {
+    width: 100%;
+
+    .main-wrapper {
+        padding: 50px 0;
+        display: flex;
+        justify-content: center;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 500px;
+            height: auto;
+
+            .publish-btn {
+                padding: 0 10px;
+
+                button {
+                    cursor: pointer;
+                    border: solid 1px black;
+                    background-color: black;
+                    color: white;
+                    font-size: 18px;
+                    border-radius: 3px;
+                    padding: 5px 10px;
+                }
+            }
+
+            .input-block {
+                position: relative;
+
+                .select-wrapper {
+                    padding: 0 10px;
+                    height: 30px;
+
+                    select {
+                        width: 100%;
+                        height: 100%;
+                        border: solid 1px;
+                        padding: 0 3px;
+                        font-family: inherit;
+                    }
+                }
+
+                input {
+                    border: none;
+                    width: 100%;
+                    height: 40px;
+                    outline: none;
+                    padding: 3px 10px;
+                    font-size: 18px;
+
+                    &::placeholder {
+                        opacity: 0.7;
+                    }
+                }
+
+                .error-message {
+                    position: absolute;
+                    left: -150px;
+                    top: 15px;
+                    transform: translateY(-50%);
+                    color: red;
+                }
+
+                textarea {
+                    font-family: inherit;
+                    border: none;
+                    width: 100%;
+                    resize: none;
+                    outline: none;
+                    height: 300px;
+                    padding: 3px 10px;
+                    font-size: 18px;
+
+                    &::placeholder {
+                        opacity: 0.7;
+                    }
+
+                    &::-webkit-scrollbar {
+                        width: 3px;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background-color: #000000;
+                        border-radius: 11px;
+                        border: 1px solid #000000;
+                    }
+                }
+            }
+
+
+
+        }
+    }
+}
