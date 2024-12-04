@@ -8,7 +8,7 @@ This is a full-stack application that allows users to create and read blog posts
 ## Features
 - **Create Blog Post:** Users can create a new blog post.
 - **Read Blog Posts:** Users can view a list of blog posts.
-- **Backend:** The backend is built with NestJS, which connects the         frontend to the server and handles creating and fetching blog posts.
+- **Backend:** The backend is built with NestJS, which connects the frontend to the server and handles creating and fetching blog posts.
 - **Frontend:** React (TypeScript) is used to display the blog posts and manage form submissions for adding new posts.
 
 ## Technologies Used

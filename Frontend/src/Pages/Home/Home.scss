@@ -1,0 +1,21 @@
+.homepage-container-wrapper {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    height: 100vh;
+}
+
+.homepage-left-side {
+    // background-color: rgb(225, 245, 115);
+    display: flex;
+    justify-content: right;
+    padding: 30px 50px 30px 0; 
+    border-right: 2px solid #F2F2F2;
+}
+
+.homepage-right-side {
+    // background-color: rgb(224, 255, 224);
+    padding: 30px 50px;
+    padding: 30px 90px 30px 30px; 
+    display: flex;
+    justify-content: right;
+}

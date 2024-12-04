@@ -32,7 +32,7 @@ const App: React.FunctionComponent = () => {
 
             <Header />
             <Home />
-
+            
         </div>
     );
 };

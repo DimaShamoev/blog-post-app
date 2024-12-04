@@ -77,7 +77,7 @@ body {
             justify-content: space-between;
             gap: 20px;
 
-            .write-btn a{
+            .write-btn a {
                 text-decoration: none;
                 display: flex;
                 align-items: center;
@@ -105,14 +105,84 @@ body {
             }
         }
 
-        
+
     }
+}
+
+.home-blog-nav {
+    position: relative;
+    width: 750px;
+    height: 50px;
+    padding: 0px 35px 0px 35px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    // background-color: red;
+    border-bottom: 2px solid #F2F2F2;
+    
+
+    .blog-nav-scroll-btns {
+
+        .scroll-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-40%);
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .btn1 {
+
+            left: 0px;
+        }
+
+        .btn2 {
+            right: 0;
+        }
+    }
+
+    .blog-nav-content-btns {
+
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        .content-btns {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+
+            span {
+                font-size: 14px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                color: #6B6B6B;
+            }
+
+            span.active {
+                border-bottom: 1px solid black;
+                color: black;
+            }
+
+        }
+    }
+
+}
+
+.content-block {
+    padding: 30px 0;
 }
 
 @media screen and (max-width: 700px) {
     .header {
         .header-wrapper {
             padding: 10px;
+
             .header-left-side {
                 .header-search {
                     display: none;
