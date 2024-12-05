@@ -1,0 +1,31 @@
+.main-wrapper {
+    padding: 20px 40px;
+
+    .user-info {
+
+        .user-pic {
+            height: 50px;
+            width: 50px;
+            background-color: gray;
+            border-radius: 50%;
+        }
+
+        .user-name {
+            font-size: 24px;
+            font-weight: 600;
+        }
+    }
+
+    .user-blogs-list {
+        background-color: gray;
+        border-radius: 15px;
+        padding: 10px;
+        width: 800px;
+        max-width: 100%;
+
+
+        ul {
+            list-style: none;
+        }
+    }
+}

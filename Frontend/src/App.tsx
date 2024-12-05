@@ -1,8 +1,10 @@
 import React from "react";
-import CreateBlog from "./Pages/CreateBlog/CreateBlog";
-// import Home from "./Pages/Home/Home";
-// import Header from "./components/Header";
-// import MainPage from "./Pages/MainPage/MainPage";
+// import CreateBlog from "./Pages/CreateBlog/CreateBlog";
+import Profile from "./Pages/Profile/Profile";
+import Home from "./Pages/Home/Home";
+import Header from "./components/Header";
+import SignIn from "./Pages/SignIn/SignIn";
+import MainPage from "./Pages/MainPage/MainPage";
 // import BlogPostForm from "./components/BlogPostForm";
 // import BlogsList from "./components/BlogsList";
 
@@ -31,19 +33,29 @@ const App: React.FunctionComponent = () => {
             
             */}
 
-            {/* 
-                Authorized Main Page
-                <Header />
-                <Home />
-            */}
+            {/* Authorized Main Page */}
+            {/* <Header /> */}
+            {/* <Home />    */}
 
-            {/* 
-                Blog Writing Page
-            */}
-            <CreateBlog />
+            {/* Blog Writing Page */}
+            {/* <CreateBlog /> */}
+
+            {/* Authorized User Profile */}
+            {/* <Profile /> */}
+
+            {/* Registration Forms */}
+            <SignIn />
+
             
         </div>
     );
 };
 
 export default App;
+
+
+// TO DOs
+// 1. Aside Menu
+// 2. Routing
+// 3. DB
+// 4. Authorization
