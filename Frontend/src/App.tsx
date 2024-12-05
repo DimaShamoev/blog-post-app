@@ -5,6 +5,8 @@ import Home from "./Pages/Home/Home";
 import Header from "./components/Header";
 import SignIn from "./Pages/SignIn/SignIn";
 import MainPage from "./Pages/MainPage/MainPage";
+import SignUp from "./Pages/SignUp/SignUp";
+import PasswordRecovery from "./Pages/PasswordRecovery/PasswordRecovery";
 // import BlogPostForm from "./components/BlogPostForm";
 // import BlogsList from "./components/BlogsList";
 
@@ -43,8 +45,10 @@ const App: React.FunctionComponent = () => {
             {/* Authorized User Profile */}
             {/* <Profile /> */}
 
-            {/* Registration Forms */}
-            <SignIn />
+            {/* Forms */}
+            {/* <SignIn /> */}
+            {/* <SignUp /> */}
+            <PasswordRecovery />
 
             
         </div>
