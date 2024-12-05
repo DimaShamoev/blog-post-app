@@ -50,7 +50,7 @@ const SignIn: React.FunctionComponent = () => {
                                 <label>
                                     {/* <span>Password</span> */}
                                     <input
-                                        type="text"
+                                        type="password"
                                         placeholder='Password'
                                         {...register('password', {required: 'This Field Required'})}
                                     />

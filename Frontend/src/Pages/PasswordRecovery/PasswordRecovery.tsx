@@ -32,7 +32,13 @@ const PasswordRecovery: React.FunctionComponent = () => {
                             <input
                                 type="text"
                                 placeholder='Enter Email'
-                                {...register('email', {required: "This Field Required"})}
+                                {...register('email', {
+                                    required: "This Field Required",
+                                    pattern: {
+                                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                                        message: 'Enter a valid email'
+                                    }
+                                })}
                             />
                             {errors.email && <p className='error-message'>{errors.email.message}</p>}
                         </div>

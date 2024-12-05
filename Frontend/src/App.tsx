@@ -1,12 +1,13 @@
 import React from "react";
 // import CreateBlog from "./Pages/CreateBlog/CreateBlog";
-import Profile from "./Pages/Profile/Profile";
-import Home from "./Pages/Home/Home";
-import Header from "./components/Header";
-import SignIn from "./Pages/SignIn/SignIn";
-import MainPage from "./Pages/MainPage/MainPage";
-import SignUp from "./Pages/SignUp/SignUp";
-import PasswordRecovery from "./Pages/PasswordRecovery/PasswordRecovery";
+// import Profile from "./Pages/Profile/Profile";
+// import Home from "./Pages/Home/Home";
+// import Header from "./components/Header";
+// import SignIn from "./Pages/SignIn/SignIn";
+// import MainPage from "./Pages/MainPage/MainPage";
+// import SignUp from "./Pages/SignUp/SignUp";
+// import PasswordRecovery from "./Pages/PasswordRecovery/PasswordRecovery";
+// import Footer from "./components/Footer";
 // import BlogPostForm from "./components/BlogPostForm";
 // import BlogsList from "./components/BlogsList";
 
@@ -37,7 +38,7 @@ const App: React.FunctionComponent = () => {
 
             {/* Authorized Main Page */}
             {/* <Header /> */}
-            {/* <Home />    */}
+            {/* <Home />  */}
 
             {/* Blog Writing Page */}
             {/* <CreateBlog /> */}
@@ -48,7 +49,7 @@ const App: React.FunctionComponent = () => {
             {/* Forms */}
             {/* <SignIn /> */}
             {/* <SignUp /> */}
-            <PasswordRecovery />
+            {/* <PasswordRecovery />*/}
 
             
         </div>

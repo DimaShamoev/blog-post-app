@@ -1,0 +1,174 @@
+body {
+    background: url(../../../public/img/free-cute-green-aesthetic-background-u8pu8.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.sign-up-form-container {
+    min-height: 100vh;
+
+
+    .sign-up-from-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border: solid 2px #A9CEA3;
+            border-radius: 10px;
+            padding: 20px 30px 25px 30px;
+            position: relative;
+            backdrop-filter: blur(10px);
+
+
+            .form-title {
+                position: absolute;
+                background-color: #E0F0C1;
+                z-index: 1;
+                right: 20px;
+                top: -24px;
+                font-size: 23px;
+                padding: 5px 10px;
+                color: #92c58a;
+                cursor: default;
+            }
+
+            .form-block {
+                display: flex;
+                flex-direction: column;
+                gap: 0px;
+                width: 400px;
+                max-width: 100%;
+
+                .input-block {
+                    position: relative;
+                    padding: 0 0 20px 0;
+                    height: 60px;
+                    margin-top: 20px;
+                    width: 100%;
+
+                    input {
+                        border: 2px solid #A9CEA3;
+                        background-color: transparent;
+                        height: 40px;
+                        width: 100%;
+                        padding: 0px 15px;
+                        font-size: 16px;
+                        outline: none;
+                        border-radius: 5px;
+
+                        &::placeholder {
+                            color: #92c58a;
+                        }
+                    }
+
+                    .error-message {
+                        position: absolute;
+                        opacity: 1;
+                        color: red;
+                        font-size: 14px;
+                    }
+                }
+
+                .submit-btn {
+                    height: 35px;
+                    margin: 10px 0 0 0;
+    
+                    button {
+                        height: 100%;
+                        width: 100%;
+                        background-color: transparent;
+                        color: #92c58a;
+                        font-family: inherit;
+                        cursor: pointer;
+                        border: 2px solid #A9CEA3;
+                        transition: 0.2s;
+                        border-radius: 5px;
+                        font-size: 20px;
+                        margin: 15px 0 20px 0;
+    
+                        &:hover {
+                            background-color: #A9CEA3;
+                            color: white;
+                        }
+                    }
+                }
+
+                .line {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    cursor: default;
+                    color: #92c58a;
+                    font-size: 18px;
+                    margin: 35px 0 15px 0;
+    
+                    &::before {
+                        content: "";
+                        height: 1px;
+                        width: 100%;
+                        background-color: #A9CEA3;
+                        border-radius: 10px;
+                    }
+                    &::after {
+                        content: "";
+                        height: 1px;
+                        width: 100%;
+                        background-color: #A9CEA3;
+                        border-radius: 10px;
+                    }
+                }
+
+                .social-media {
+                    display: flex;
+                    gap: 20px;
+    
+                    .social-media-btn {
+                        flex: 50%;
+                        height: 30px;
+                        
+                        .google-btn {
+                            color: #F24536;
+                            border: solid 1px #F24536;
+    
+                            &:hover {
+                                background-color: #F24536;
+                                color: white;
+                            }
+                        }
+    
+                        .facebook-btn {
+                            color: #1877F2;
+                            border: solid 1px #1877F2;
+    
+                            &:hover {
+                                background-color: #1877F2;
+                                color: white;
+                            }
+                        }
+    
+                        button {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 10px;
+                            font-family: inherit;
+                            border-radius: 5px;
+                            background-color: transparent;
+                            cursor: pointer;
+                            transition: 0.2s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
