@@ -64,4 +64,4 @@ $ npm run dev
 - Add **Users Interactions**
 
 ### Temporarily
-Еhe project is considered empty 😶‍🌫️🤦🏻‍♂️
+The project is considered as empty 😶‍🌫️🤦🏻‍♂️

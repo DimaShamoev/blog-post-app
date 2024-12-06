@@ -1,15 +1,15 @@
 import React from "react";
-// import CreateBlog from "./Pages/CreateBlog/CreateBlog";
-// import Profile from "./Pages/Profile/Profile";
-// import Home from "./Pages/Home/Home";
-// import Header from "./components/Header";
-// import SignIn from "./Pages/SignIn/SignIn";
-// import MainPage from "./Pages/MainPage/MainPage";
-// import SignUp from "./Pages/SignUp/SignUp";
-// import PasswordRecovery from "./Pages/PasswordRecovery/PasswordRecovery";
-// import Footer from "./components/Footer";
-// import BlogPostForm from "./components/BlogPostForm";
-// import BlogsList from "./components/BlogsList";
+import CreateBlog from "./Pages/CreateBlog/CreateBlog";
+import Profile from "./Pages/Profile/Profile";
+import Home from "./Pages/Home/Home";
+import Header from "./components/Header";
+import SignIn from "./Pages/SignIn/SignIn";
+import MainPage from "./Pages/MainPage/MainPage";
+import SignUp from "./Pages/SignUp/SignUp";
+import PasswordRecovery from "./Pages/PasswordRecovery/PasswordRecovery";
+import Footer from "./components/Footer";
+import BlogPostForm from "./components/BlogPostForm";
+import BlogsList from "./components/BlogsList";
 
 const App: React.FunctionComponent = () => {
     return (
@@ -21,7 +21,7 @@ const App: React.FunctionComponent = () => {
             */}
 
             {/* If User isn't Authorized */}
-            {/* <MainPage /> */}
+            <MainPage />
            
 
             {/* if user Authorized */}
@@ -49,7 +49,7 @@ const App: React.FunctionComponent = () => {
             {/* Forms */}
             {/* <SignIn /> */}
             {/* <SignUp /> */}
-            {/* <PasswordRecovery />*/}
+            {/* <PasswordRecovery /> */}
 
             
         </div>
@@ -64,3 +64,4 @@ export default App;
 // 2. Routing
 // 3. DB
 // 4. Authorization
+
