@@ -176,6 +176,11 @@ body {
 
 .content-block {
     padding: 30px 0;
+    // background-color: aqua;
+
+    .blog-block {
+        border: solid 1px black;
+    }
 }
 
 @media screen and (max-width: 700px) {

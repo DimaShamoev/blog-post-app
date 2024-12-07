@@ -1,37 +1,53 @@
-import React from 'react'
-import { useForm } from 'react-hook-form';
-import './CreateBlog.scss'
+import React from "react";
+import { useForm } from "react-hook-form";
+import "./CreateBlog.scss";
 import { UserButton, useUser } from "@clerk/clerk-react";
-import { Link, useNavigate } from 'react-router-dom';
-import { FaUser } from 'react-icons/fa';
+import { Link, useNavigate } from "react-router-dom";
+import { FaUser } from "react-icons/fa";
+import axios from "axios";
+
 const CreateBlog: React.FunctionComponent = () => {
+    const { user } = useUser();
+    const navigate = useNavigate();
+
     interface IFormData {
-        title: string
-        content: string
-        blogType: string
+        title: string;
+        content: string;
+        blogType: string;
     }
 
-    const { register, handleSubmit, formState: { errors } } = useForm<IFormData>()
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm<IFormData>();
 
-    const onsubmit = (data: IFormData) => {
-        // Change
-        console.log(data);
-    }
+    const onSubmit = async (data: IFormData) => {
+        try {
+            const response = await axios.post("http://localhost:3000/blog", {
+                title: data.title,
+                content: data.content,
+                blogType: data.blogType,
+                creatorId: user?.id,
+                creatorName: user?.username
+            });
 
-    const {user} = useUser()
-    const navigate = useNavigate()
+            console.log("Blog created:", response.data);
+            navigate("/profile");
+        } catch (error) {
+            alert(`Error creating blog: ${error}`);
+        }
+    };
 
     return (
-        <div className='blog-container'>
-            <header className='header-block'>
+        <div className="blog-container">
+            <header className="header-block">
                 <div className="container">
-                    
                     <div className="header-wrapper">
-
                         <div className="logo">
                             <Link to="/">SpaceBlog</Link>
                         </div>
-                        
+
                         <div className="profile-pic">
                             <UserButton>
                                 <UserButton.MenuItems>
@@ -44,64 +60,80 @@ const CreateBlog: React.FunctionComponent = () => {
                             </UserButton>
                             <span>{user?.username}</span>
                         </div>
-
                     </div>
-
                 </div>
             </header>
-            <main className='main'>
+
+            <main className="main">
                 <div className="container">
-
                     <div className="main-wrapper">
-
-                        <form onSubmit={handleSubmit(onsubmit)}>
+                        <form onSubmit={handleSubmit(onSubmit)}>
                             <div className="publish-btn">
-                                <button type='submit'>
-                                    Publish
-                                </button>
+                                <button type="submit">Publish</button>
                             </div>
 
                             <div className="input-block">
                                 <div className="select-wrapper">
                                     <select
-                                        {...register('blogType', {required: 'This Field Required'})}
+                                        {...register("blogType", {
+                                            required: "This Field Required",
+                                        })}
                                     >
                                         <option value="">Select Blog</option>
-                                        <option value="trending">Trending</option>
+                                        <option value="trending">
+                                            Trending
+                                        </option>
                                         <option value="society">Society</option>
-                                        <option value="lifestyle">LifeStyle</option>
+                                        <option value="lifestyle">
+                                            LifeStyle
+                                        </option>
                                         <option value="work">Work</option>
-                                        <option value="education">Education</option>
+                                        <option value="education">
+                                            Education
+                                        </option>
                                     </select>
                                 </div>
-                                {errors.blogType && <span className='error-message'>{errors.blogType.message}</span>}
+                                {errors.blogType && (
+                                    <span className="error-message">
+                                        {errors.blogType.message}
+                                    </span>
+                                )}
                             </div>
 
                             <div className="input-block">
                                 <input
                                     type="text"
-                                    placeholder='Title'
-                                    {...register('title', {required: 'This Field Required'})}
+                                    placeholder="Title"
+                                    {...register("title", {
+                                        required: "This Field Required",
+                                    })}
                                 />
-                                {errors.title && <span className='error-message'>{errors.title.message}</span>} 
+                                {errors.title && (
+                                    <span className="error-message">
+                                        {errors.title.message}
+                                    </span>
+                                )}
                             </div>
 
                             <div className="input-block">
                                 <textarea
-                                    placeholder='Tell Your Story...'
-                                    {...register('content', {required: 'This Field Required'})}
+                                    placeholder="Tell Your Story..."
+                                    {...register("content", {
+                                        required: "This Field Required",
+                                    })}
                                 />
-                                {errors.content && <span className='error-message'>{errors.content.message}</span>} 
+                                {errors.content && (
+                                    <span className="error-message">
+                                        {errors.content.message}
+                                    </span>
+                                )}
                             </div>
-
                         </form>
-
                     </div>
-
                 </div>
             </main>
         </div>
-    )
-}
+    );
+};
 
-export default CreateBlog
+export default CreateBlog;

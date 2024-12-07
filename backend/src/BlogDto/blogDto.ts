@@ -1,10 +1,11 @@
 export interface IUserBlog {
-    author: string,
-    title: string
-    content: string
+    title: string;
+    content: string;
+    CreatorId: string;
+    creatorName: string
 }
 
 export interface IBlog extends IUserBlog {
-    id: number
-    date: string
+    id: number;
+    date: string;
 }
