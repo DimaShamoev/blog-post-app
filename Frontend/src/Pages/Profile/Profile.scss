@@ -1,13 +1,14 @@
-.main-wrapper {
+.main-block-wrapper {
     padding: 20px 40px;
+    display: flex;
+    background-color: red;
+    flex-direction: column;
 
     .user-info {
 
         .user-pic {
-            height: 50px;
-            width: 50px;
-            background-color: gray;
-            border-radius: 50%;
+            height: 100%;
+            width: 100%;
         }
 
         .user-name {

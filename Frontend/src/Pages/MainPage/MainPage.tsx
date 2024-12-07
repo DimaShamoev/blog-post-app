@@ -2,10 +2,12 @@ import React from "react";
 import "./MainPage.scss";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { FaPenAlt, FaRunning, FaUser } from "react-icons/fa";
+import { SignUp } from "@clerk/clerk-react";
 
 const MainPage: React.FunctionComponent = () => {
 
-    const [openAside, setOpenAside] = React.useState<boolean>(false)
+    const [openAside, setOpenAside] = React.useState<boolean>(false);
+    const [Modal, setModal] = React.useState<boolean>(false);
 
     const handleAsideOpen = (): void => {
         setOpenAside(true);
@@ -13,6 +15,13 @@ const MainPage: React.FunctionComponent = () => {
 
     const handleAsideClose = (): void => {
         setOpenAside(false)
+    }
+
+    const handleOpenModal = () => {
+        setModal(true)
+    }
+    const handleCloseModal = () => {
+        setModal(false)
     }
 
     return (
@@ -26,9 +35,9 @@ const MainPage: React.FunctionComponent = () => {
                         <div className="header-navigation">
                             <nav>
                                 <ul>
-                                    <li><a href="#">Write</a></li>
-                                    <li><a href="#">Sign In</a></li>
-                                    <li className="header-start-btn"><a href="#">Get Started</a></li>
+                                    <li onClick={handleOpenModal}><a href="#">Write</a></li>
+                                    <li onClick={handleOpenModal}><a href="#">Sign In</a></li>
+                                    <li onClick={handleOpenModal} className="header-start-btn"><a href="#">Get Started</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -47,7 +56,7 @@ const MainPage: React.FunctionComponent = () => {
                             </div>
                         </div>
                         <div className="start-writing-btn">
-                            <a href="#">
+                            <a onClick={handleOpenModal} href="#">
                                 Start Writing
                             </a>
                         </div>
@@ -69,10 +78,16 @@ const MainPage: React.FunctionComponent = () => {
                         </div>
                         <div className={`page-lists-block`}>
                             <ul>
-                                <li><a href="#"><span><FaPenAlt /></span> Write</a></li>
+                                <li onClick={handleOpenModal}><a href="#"><span><FaPenAlt /></span> Write</a></li>
                                 <li><a href="#"><span><FaUser /></span> Sign In</a></li>
                                 <li><a href="#"><span><FaRunning /></span> Get Started</a></li>
                             </ul>
+                        </div>
+                    </div>
+
+                    <div onClick={handleCloseModal} className={`sign-up-modal ${Modal ? 'active' : ''}`}>
+                        <div className="modal-wrapper">
+                            <SignUp />
                         </div>
                     </div>
 

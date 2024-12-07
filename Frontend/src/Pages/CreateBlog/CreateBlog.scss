@@ -1,4 +1,4 @@
-.header {
+.header-block {
     .header-wrapper {
         display: flex;
         justify-content: space-evenly;
@@ -13,11 +13,11 @@
         }
 
         .profile-pic {
-            height: 40px;
-            width: 40px;
-            background-color: yellow;
-            border-radius: 50%;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            text-transform: capitalize;
         }
     }
 }

@@ -2,10 +2,16 @@ import React from "react";
 import { BsPencilSquare } from "react-icons/bs";
 import { IoMenu, IoSearch } from "react-icons/io5";
 import useAside from "../Hooks/UseAside";
+import { UserButton, useUser } from "@clerk/clerk-react";
+import { Link, useNavigate } from "react-router-dom";
+import { FaUser } from "react-icons/fa";
 
 const Header: React.FunctionComponent = () => {
-    const { asideState, setAsideState } = useAside()
-    console.log(asideState)
+    const { asideState, setAsideState } = useAside();
+    console.log(asideState);
+
+    const { user } = useUser();
+    const navigate = useNavigate() 
 
     return (
         <header className="header">
@@ -13,7 +19,7 @@ const Header: React.FunctionComponent = () => {
                 <div className="header-wrapper">
                     <div className="header-left-side">
                         <div className="header-logo">
-                            <a href="#">SpaceBlog</a>
+                            <Link to="/">SpaceBlog</Link>
                         </div>
                         <div className="header-search">
                             <span>
@@ -24,13 +30,24 @@ const Header: React.FunctionComponent = () => {
                     </div>
                     <div className="header-right-side">
                         <div className="write-btn">
-                            <a href="#">
+                            <Link to="/createBlog">
                                 <BsPencilSquare />
                                 <span>Write</span>
-                            </a>
+                            </Link>
                         </div>
-                        <div className="user-profile">PFP</div>
-                        
+                        <div className="user-profile">
+                            {/* {user?.username} */}
+                            <UserButton>
+                                <UserButton.MenuItems>
+                                    <UserButton.Action
+                                        label="Profile"
+                                        labelIcon={<FaUser />}
+                                        onClick={() => navigate('/profile')}
+                                    />
+                                </UserButton.MenuItems>
+                            </UserButton>
+                        </div>
+
                         <div className="menu-btn" onClick={setAsideState}>
                             <IoMenu />
                         </div>

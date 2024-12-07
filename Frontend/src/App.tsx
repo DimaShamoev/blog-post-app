@@ -10,6 +10,8 @@ import PasswordRecovery from "./Pages/PasswordRecovery/PasswordRecovery";
 import Footer from "./components/Footer";
 import BlogPostForm from "./components/BlogPostForm";
 import BlogsList from "./components/BlogsList";
+import { SignInButton, SignedIn, SignedOut, UserProfile } from "@clerk/clerk-react";
+import Contents from "./components/Contents";
 
 const App: React.FunctionComponent = () => {
     return (
@@ -21,8 +23,15 @@ const App: React.FunctionComponent = () => {
             */}
 
             {/* If User isn't Authorized */}
-            <MainPage />
-           
+            <SignedOut>
+                <MainPage />
+            </SignedOut>
+            <SignedIn>
+                {/* <Home/> */}
+                {/* <Profile /> */}
+                {/* <CreateBlog /> */}
+                <Contents />
+            </SignedIn>
 
             {/* if user Authorized */}
             {/* 

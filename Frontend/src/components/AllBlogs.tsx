@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Content: React.FunctionComponent = () => {
+const AllBlogs: React.FunctionComponent = () => {
   return (
     <div className='content-block'>
         Fetch Content
@@ -8,4 +8,4 @@ const Content: React.FunctionComponent = () => {
   )
 }
 
-export default Content
+export default AllBlogs;

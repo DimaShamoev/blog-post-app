@@ -1,11 +1,15 @@
 import React from 'react'
-import Content from '../../components/Content'
+import Content from '../../components/AllBlogs'
 import HomeBlogNavigation from '../../components/HomeBlogNavigation'
 import './Home.scss'
+import Header from '../../components/Header'
 
 const Home: React.FunctionComponent = () => {
+
   return (
     <div className='home-page-container'>
+        <Header />
+
         <div className="container">
 
             <div className="homepage-container-wrapper">

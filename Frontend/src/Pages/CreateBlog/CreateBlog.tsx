@@ -1,7 +1,9 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
 import './CreateBlog.scss'
-
+import { UserButton, useUser } from "@clerk/clerk-react";
+import { Link, useNavigate } from 'react-router-dom';
+import { FaUser } from 'react-icons/fa';
 const CreateBlog: React.FunctionComponent = () => {
     interface IFormData {
         title: string
@@ -16,19 +18,31 @@ const CreateBlog: React.FunctionComponent = () => {
         console.log(data);
     }
 
+    const {user} = useUser()
+    const navigate = useNavigate()
+
     return (
         <div className='blog-container'>
-            <header className='header'>
+            <header className='header-block'>
                 <div className="container">
                     
                     <div className="header-wrapper">
 
                         <div className="logo">
-                            <a href="#">SpaceBlog</a>
+                            <Link to="/">SpaceBlog</Link>
                         </div>
                         
                         <div className="profile-pic">
-                            pfp
+                            <UserButton>
+                                <UserButton.MenuItems>
+                                    <UserButton.Action
+                                        label="Profile"
+                                        labelIcon={<FaUser />}
+                                        onClick={() => navigate("/profile")}
+                                    />
+                                </UserButton.MenuItems>
+                            </UserButton>
+                            <span>{user?.username}</span>
                         </div>
 
                     </div>
