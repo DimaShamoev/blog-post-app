@@ -2,9 +2,30 @@ import React from "react";
 import Header from "../../components/Header";
 import "./Profile.scss";
 import { UserButton, useUser } from "@clerk/clerk-react";
+import { IBlog } from "../../BlogDto/BlogDto";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Profile: React.FunctionComponent = () => {
-    const { user } = useUser()
+    const [userBlogs, setUserBlogs] = React.useState<IBlog[]>([]);
+    const { user } = useUser();
+
+    React.useEffect(() => {
+        const fetchBlogs = async () => {
+            try {
+                const res = await axios.get("http://localhost:3000/blog");
+                setUserBlogs(res.data);
+            } catch (err) {
+                alert(`Can't Fetch Data: ${err}`);
+            }
+        };
+        fetchBlogs();
+    }, []);
+
+    const blogs = React.useMemo(
+        () => userBlogs.filter((blog) => blog.creatorId === user?.id),
+        [userBlogs, user]
+    );
 
     return (
         <div className="profile-page-container">
@@ -13,21 +34,29 @@ const Profile: React.FunctionComponent = () => {
                 <div className="container">
                     <div className="main-block-wrapper">
                         <div className="user-info">
-                            <div className="user-pic">
+                            <div className="user-pic-name">
                                 <UserButton />
+                                <span>{user?.username}</span>
                             </div>
-                            <div className="user-name">{user?.username}</div>
+                        </div>
+
+                        <div className="my-blogs-block">
+                            My Blogs
                         </div>
 
                         <div className="user-blogs-list">
-                            <div className="user-blog">
-                                <p>name</p>
-                                <p>cont</p>
-                                <p>pic</p>
-                            </div>
-
-                            List of Users' Blogs
+                            {blogs.map((blog) => (
+                                <div key={blog.id} className="blog-block">
+                                    <div className="blog-title">
+                                        <Link to={`/blog/${blog.id}`} >{blog.title}</Link>
+                                    </div>
+                                    <div className="blog-content">
+                                        {blog.content}
+                                    </div>
+                                </div>
+                            ))}
                         </div>
+
                     </div>
                 </div>
             </div>

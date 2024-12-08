@@ -176,11 +176,41 @@ body {
 
 .content-block {
     padding: 30px 0;
-    // background-color: aqua;
 
     .blog-block {
-        border: solid 1px black;
+        border-bottom: solid 2px #e6e4e4;
+        padding: 0 0 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .blog-main-info {
+            display: flex;
+            flex-direction: column;
+    
+            .blog-title a{
+                font-size: 30px;
+                font-weight: 600;
+                color: black;
+            }
+        }
+
+        .blog-content {
+            font-size: 18px;
+        }
+
+        .blog-info {
+            font-size: 14px;
+        }
     }
+
+    .blog-block:not(.blog-block:first-child) {
+        padding: 20px 0;
+    }
+
+    
+
+    
 }
 
 @media screen and (max-width: 700px) {

@@ -8,7 +8,6 @@ import { FaUser } from "react-icons/fa";
 
 const Header: React.FunctionComponent = () => {
     const { asideState, setAsideState } = useAside();
-    console.log(asideState);
 
     const { user } = useUser();
     const navigate = useNavigate() 
@@ -36,7 +35,6 @@ const Header: React.FunctionComponent = () => {
                             </Link>
                         </div>
                         <div className="user-profile">
-                            {/* {user?.username} */}
                             <UserButton>
                                 <UserButton.MenuItems>
                                     <UserButton.Action

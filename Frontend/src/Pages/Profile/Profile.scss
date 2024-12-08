@@ -1,32 +1,53 @@
 .main-block-wrapper {
     padding: 20px 40px;
     display: flex;
-    background-color: red;
     flex-direction: column;
 
     .user-info {
+        display: flex;
+        justify-content: left;
 
-        .user-pic {
-            height: 100%;
-            width: 100%;
-        }
+        .user-pic-name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+            text-shadow: 0 0 1px rgba(0, 0, 0, 0.822);
 
-        .user-name {
-            font-size: 24px;
-            font-weight: 600;
+            .span {
+                font-size: 30px;
+            }
         }
+    }
+
+    .my-blogs-block {
+        font-size: 30px;
+        margin: 40px 0 0 0;
+        border-bottom: 2px solid #f0f0f0;
+        padding: 0 0 10px 0;
+        cursor: default;
     }
 
     .user-blogs-list {
-        background-color: gray;
         border-radius: 15px;
-        padding: 10px;
-        width: 800px;
+        padding: 10px 0;
         max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
 
 
-        ul {
-            list-style: none;
+        .blog-block {
+            border-bottom: 2px solid #f0f0f0;
+            padding: 0 0 10px 0;
+            cursor: pointer;
+
+            .blog-title a {
+                color: black;
+                font-size: 40px;
+                font-weight: 600;
+            }
         }
     }
+
 }

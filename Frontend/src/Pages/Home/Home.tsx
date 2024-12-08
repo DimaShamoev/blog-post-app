@@ -3,6 +3,7 @@ import Content from '../../components/AllBlogs'
 import HomeBlogNavigation from '../../components/HomeBlogNavigation'
 import './Home.scss'
 import Header from '../../components/Header'
+import AllBlogs from '../../components/AllBlogs'
 
 const Home: React.FunctionComponent = () => {
 
@@ -17,12 +18,13 @@ const Home: React.FunctionComponent = () => {
                 <div className="homepage-left-side">
                     <div className="homepage-left-side-wrapper">
                         <HomeBlogNavigation />
-                        <Content />
+                        <AllBlogs />
                     </div>
                 </div>
                 <div className="homepage-right-side">
                     <div className="homepage-right-side-wrapper">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, perspiciatis!
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, perspiciatis!</p>
+                        <p>Will Be Added Sooon</p>
                     </div>
                 </div>
 

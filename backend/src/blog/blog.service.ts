@@ -5,14 +5,14 @@ import { IBlog, IUserBlog } from 'src/BlogDto/blogDto';
 export class BlogService {
     private Blogs: IBlog[] = [];
     private currentID = 1;
-    private date = `${new Date().getDay()} / ${new Date().getMonth() - 1} / ${new Date().getFullYear()}`;
+    private date = `${new Date().getDate()} / ${new Date().getMonth() + 1} / ${new Date().getFullYear()}`;
 
     findAll() {
         return this.Blogs;
     }
 
     findById(findId: number) {
-        return this.Blogs.filter((blog) => blog.id === findId);
+        return this.Blogs.find((blog) => blog.id === findId);
     }
 
     createBlog(blogData: IUserBlog, creatorId: string) {

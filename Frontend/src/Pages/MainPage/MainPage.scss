@@ -164,6 +164,11 @@
             overflow: hidden;
             transition: .5s ease-in-out;
 
+            .overlay {
+                position: absolute;
+                inset: 0;
+            }
+
             .modal-wrapper {
                 position: absolute;
                 left: 50%;

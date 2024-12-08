@@ -85,7 +85,8 @@ const MainPage: React.FunctionComponent = () => {
                         </div>
                     </div>
 
-                    <div onClick={handleCloseModal} className={`sign-up-modal ${Modal ? 'active' : ''}`}>
+                    <div className={`sign-up-modal ${Modal ? 'active' : ''}`}>
+                        <div onClick={handleCloseModal} className="overlay"></div>
                         <div className="modal-wrapper">
                             <SignUp />
                         </div>
