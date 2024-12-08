@@ -33,7 +33,7 @@
         form {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 30px;
             width: 500px;
             height: auto;
 
@@ -82,8 +82,8 @@
 
                 .error-message {
                     position: absolute;
-                    left: -150px;
-                    top: 15px;
+                    left: 10px;
+                    top: -10px;
                     transform: translateY(-50%);
                     color: red;
                 }

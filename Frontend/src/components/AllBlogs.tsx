@@ -32,7 +32,7 @@ const AllBlogs: React.FunctionComponent = () => {
                         <div className="blog-about">About: {blog.blogType}</div>
                     </div>
                     <div className="blog-content">
-                        {blog.content}
+                        {blog.content.split(" ").slice(0, 10).join(" ")}...
                     </div>
                     <div className="blog-info">
                         <div className="creator-name">Created By: {blog.creatorName}</div>

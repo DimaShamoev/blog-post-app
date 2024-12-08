@@ -51,7 +51,7 @@ const Profile: React.FunctionComponent = () => {
                                         <Link to={`/blog/${blog.id}`} >{blog.title}</Link>
                                     </div>
                                     <div className="blog-content">
-                                        {blog.content}
+                                        {blog.content.split(" ").slice(0, 10).join(" ")}...
                                     </div>
                                 </div>
                             ))}

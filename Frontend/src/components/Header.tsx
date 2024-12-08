@@ -12,6 +12,8 @@ const Header: React.FunctionComponent = () => {
     const { user } = useUser();
     const navigate = useNavigate() 
 
+    console.log(asideState)
+
     return (
         <header className="header">
             <div className="container">
