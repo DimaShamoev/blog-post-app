@@ -2,15 +2,6 @@ import React from 'react'
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 
 const HomeBlogNavigation: React.FunctionComponent = () => {
-    const [btnIndex, setBtnIndex] = React.useState<number>(0)
-
-    const handleNext = () => {
-        setBtnIndex((prevIndex) => (prevIndex + 1) % navBtns.length)
-    }
-
-    const handlePrev = () => {
-        setBtnIndex((prevIndex) => (prevIndex - 1 + navBtns.length) % navBtns.length)
-    }
 
     interface INavBtns {
         forYou: string,
@@ -38,10 +29,10 @@ const HomeBlogNavigation: React.FunctionComponent = () => {
         <div className='home-blog-nav'>
             
             <div className="blog-nav-scroll-btns">
-                <button className='btn1 scroll-btn' onClick={handlePrev}>
+                <button className='btn1 scroll-btn'>
                     <MdKeyboardArrowLeft />
                 </button>
-                <button className='btn2 scroll-btn' onClick={handleNext}>
+                <button className='btn2 scroll-btn'>
                     <MdKeyboardArrowRight />
                 </button>
             </div>

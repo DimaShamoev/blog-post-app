@@ -2,14 +2,13 @@ import React from "react";
 import { BsPencilSquare } from "react-icons/bs";
 import { IoMenu, IoSearch } from "react-icons/io5";
 import useAside from "../Hooks/UseAside";
-import { UserButton, useUser } from "@clerk/clerk-react";
+import { UserButton } from "@clerk/clerk-react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
 
 const Header: React.FunctionComponent = () => {
     const { asideState, setAsideState } = useAside();
 
-    const { user } = useUser();
     const navigate = useNavigate() 
 
     console.log(asideState)

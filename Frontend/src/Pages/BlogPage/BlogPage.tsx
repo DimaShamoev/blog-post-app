@@ -12,7 +12,7 @@ const BlogPage: React.FunctionComponent = () => {
     React.useEffect(() => {
         const fetchBlog = async () => {
             try {
-                const res = await axios.get(`http://localhost:3000/blog/${id}`);
+                const res = await axios.get(`https://spaceblog-a6he.onrender.com/blog/${id}`);
                 setBlog(res.data);
             } catch (err) {
                 alert("Failed to fetch blog.");

@@ -1,5 +1,4 @@
 import React from 'react'
-import Content from '../../components/AllBlogs'
 import HomeBlogNavigation from '../../components/HomeBlogNavigation'
 import './Home.scss'
 import Header from '../../components/Header'

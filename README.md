@@ -18,6 +18,7 @@ This is a full-stack application that allows users to create and read blog posts
   - **Axios** for making HTTP requests
   - **React Hook Form** for handling forms
 
+
 - **Backend:**  
   - **NestJS (TypeScript)**
 
@@ -54,14 +55,6 @@ $ cd frontend
 $ npm run dev
 ```
 
-## Future Plans
 
-- Connect With **Database**
-- Change App **Style**
-- Add **authorization**
-- Implement **Routing**
-- Add **sorting**
-- Add **Users Interactions**
-
-### Temporarily
-The project is considered as empty 😶‍🌫️🤦🏻‍♂️
+### 🏁 Final Version 🏁
+https://bloggingspace.netlify.app/
