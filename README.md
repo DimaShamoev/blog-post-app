@@ -17,6 +17,7 @@ This is a full-stack application that allows users to create and read blog posts
   - **CSS/SCSS** for styling
   - **Axios** for making HTTP requests
   - **React Hook Form** for handling forms
+  - **Clerk** for user management
 
 
 - **Backend:**  
