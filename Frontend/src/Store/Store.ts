@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import AsideMenuReducer from "./Slices/AsideMenuSlice";
+import BlogLikeReducer from "./Slices/BlogLikeSlice";
 
 export const store = configureStore({
     reducer: {
-        asideMenu: AsideMenuReducer
+        asideMenu: AsideMenuReducer,
+        blogLike: BlogLikeReducer
     }
 });
 

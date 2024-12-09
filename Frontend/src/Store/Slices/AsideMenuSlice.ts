@@ -13,8 +13,8 @@ const asideMenuSlice = createSlice({
     initialState,
     reducers:{
         toggleAsideMenu: (state) => {
-            state.isAsideOpen = !state.isAsideOpen
-        }
+            state.isAsideOpen = !state.isAsideOpen;
+        },
     },
 });
 
