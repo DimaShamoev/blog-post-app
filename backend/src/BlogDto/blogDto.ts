@@ -2,8 +2,10 @@ export interface IUserBlog {
     title: string;
     content: string;
     CreatorId: string;
-    creatorName: string
-    blogLike: number
+    creatorName: string;
+    blogLike: number;
+    userImgUrl: string;
+    likes: number
 }
 
 export interface IBlog extends IUserBlog {

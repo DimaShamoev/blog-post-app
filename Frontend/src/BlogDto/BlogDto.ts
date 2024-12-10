@@ -6,4 +6,5 @@ export interface IBlog {
     blogType: string;
     creatorId: string;
     creatorName: string;
+    userImgUrl: string;
 }

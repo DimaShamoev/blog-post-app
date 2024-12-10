@@ -4,12 +4,9 @@ import axios from "axios";
 import { IBlog } from "../../BlogDto/BlogDto";
 import Header from "../../components/Header";
 import "./BlogPage.scss"
-import { useUser } from "@clerk/clerk-react";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../../Store/Store"
-import { toggleLike, likeIncrement, likeDecrement } from "../../Store/Slices/BlogLikeSlice";
-import { Dispatch } from "@reduxjs/toolkit";
 
 const BlogPage: React.FunctionComponent = () => {
     const { id } = useParams<{ id: string }>();
@@ -21,7 +18,7 @@ const BlogPage: React.FunctionComponent = () => {
     React.useEffect(() => {
         const fetchBlog = async () => {
             try {
-                const res = await axios.get(`https://spaceblog-a6he.onrender.com/blog/${id}`);
+                const res = await axios.get(`http://localhost:3000/blog/${id}`);
                 setBlog(res.data);
             } catch (err) {
                 alert("Failed to fetch blog.");
@@ -50,7 +47,13 @@ const BlogPage: React.FunctionComponent = () => {
                             {cnt}:{value ? <span><FaHeart /></span> : <span><FaRegHeart /></span>}
                         </div>
                         <div className="blog-creator">
-                            <p>Created By: {blog?.creatorName}</p>
+                            <p>Created By: </p>
+                            <div className="blog-creator-info">
+                                <div className="image-wrapper">
+                                    <img src={blog?.userImgUrl} alt="" />
+                                </div>
+                                <p>{blog?.creatorName}</p>
+                            </div>
                         </div>
                         <div className="blog-upload-date">
                             <p>Uploaded: {blog?.date}</p>

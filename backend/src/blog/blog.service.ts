@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { IBlog, IUserBlog } from 'src/BlogDto/blogDto';
 
 @Injectable()
@@ -29,5 +29,25 @@ export class BlogService {
         const blogToDelete = this.findById(id);
         this.Blogs = this.Blogs.filter((blog) => blog.id !== id);
         return blogToDelete;
+    }
+
+    likeBlog(id: number) {
+        const blog = this.Blogs.find((b) => b.id === id);
+        if (!blog) {
+            throw new NotFoundException(`Blog with ID ${id} not found.`);
+        }
+        blog.likes += 1;
+        return blog;
+    }
+
+    unlikeBlog(id: number) {
+        const blog = this.Blogs.find((b) => b.id === id);
+        if (!blog) {
+            throw new NotFoundException(`Blog with ID ${id} not found.`);
+        }
+        if (blog.likes > 0) {
+            blog.likes -= 1;
+        }
+        return blog;
     }
 }
