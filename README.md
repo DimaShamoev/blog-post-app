@@ -1,5 +1,5 @@
 <div style='display: flex; justify-content: center'>
-<img src='./Frontend/public/blogging-banner.jpg/' height='450' width="100%">
+    <img src='./Frontend/public/blogging-banner.jpg/' height='450' width="100%">
 </div>
 
 # Home Made Blogging App
@@ -19,15 +19,13 @@ This is a full-stack application that allows users to create and read blog posts
   - **React Hook Form** for handling forms
   - **Clerk** for user management
 
-
 - **Backend:**  
   - **NestJS (TypeScript)**
-
 
 ## Installation
 1.Clone the repository:
 ```bash
-$ git clonehttps://github.com/DimaShamoev/blog-post-app.git
+$ git clone https://github.com/DimaShamoev/blog-post-app.git
 ```
 
 2.Install the dependencies:
@@ -55,7 +53,6 @@ $ npm run start:dev
 $ cd frontend
 $ npm run dev
 ```
-
 
 ### 🏁 Final Version 🏁
 https://bloggingspace.netlify.app/
