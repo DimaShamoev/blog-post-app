@@ -13,7 +13,7 @@ const Profile: React.FunctionComponent = () => {
     React.useEffect(() => {
         const fetchBlogs = async () => {
             try {
-                const res = await axios.get("https://spaceblog-a6he.onrender.com/blog");
+                const res = await axios.get("http://localhost:3000/blog");
                 setUserBlogs(res.data);
             } catch (err) {
                 alert(`Can't Fetch Data: ${err}`);

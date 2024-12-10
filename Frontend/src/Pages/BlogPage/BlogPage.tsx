@@ -13,26 +13,10 @@ import { Dispatch } from "@reduxjs/toolkit";
 
 const BlogPage: React.FunctionComponent = () => {
     const { id } = useParams<{ id: string }>();
-    const { user } = useUser()
     const [blog, setBlog] = React.useState<IBlog | null>(null);
-    const [like, setLike] = React.useState<boolean>(false);
 
     const value = useSelector((state: RootState) => state.blogLike.isLiked)
     const cnt = useSelector((state: RootState) => state.blogLike.cnt)
-    const dispatch = useDispatch<Dispatch>()
-    const handleLike = () => dispatch(toggleLike())
-    const handleLikeCnt = () => dispatch(likeIncrement())
-    const handleLikeCntDec = () => dispatch(likeDecrement())
-
-    const likess = () => {
-        handleLike();
-
-        if(!value) {
-            handleLikeCnt()
-        } else {
-            handleLikeCntDec()
-        }
-    }
 
     React.useEffect(() => {
         const fetchBlog = async () => {
@@ -46,10 +30,6 @@ const BlogPage: React.FunctionComponent = () => {
 
         fetchBlog();
     }, [id]);
-
-    // const handleLikes = () => {
-    //     setLike(prev => !prev)
-    // }
 
     console.log(value)
 
@@ -66,7 +46,7 @@ const BlogPage: React.FunctionComponent = () => {
                     </div>
                     
                     <div className="blog-info">
-                        <div onClick={likess} className="reacts">
+                        <div className="reacts">
                             {cnt}:{value ? <span><FaHeart /></span> : <span><FaRegHeart /></span>}
                         </div>
                         <div className="blog-creator">

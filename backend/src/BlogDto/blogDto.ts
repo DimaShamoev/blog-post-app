@@ -3,6 +3,7 @@ export interface IUserBlog {
     content: string;
     CreatorId: string;
     creatorName: string
+    blogLike: number
 }
 
 export interface IBlog extends IUserBlog {

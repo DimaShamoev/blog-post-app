@@ -5,8 +5,12 @@ import { UserButton, useUser } from "@clerk/clerk-react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
 import axios from "axios";
+import { useSelector } from "react-redux";
+import { RootState } from "../../Store/Store";
 
 const CreateBlog: React.FunctionComponent = () => {
+    const likesCnt = useSelector((state: RootState) => state.blogLike.cnt)
+
     const { user } = useUser();
     const navigate = useNavigate();
 
@@ -24,12 +28,14 @@ const CreateBlog: React.FunctionComponent = () => {
 
     const onSubmit = async (data: IFormData) => {
         try {
-            const response = await axios.post("https://spaceblog-a6he.onrender.com/blog", {
+            const response = await axios.post("http://localhost:3000/blog", {
                 title: data.title,
                 content: data.content,
                 blogType: data.blogType,
                 creatorId: user?.id,
-                creatorName: user?.username
+                creatorName: user?.username,
+                blogLike: likesCnt
+
             });
 
             console.log("Blog created:", response.data);
