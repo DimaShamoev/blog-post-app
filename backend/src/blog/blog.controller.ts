@@ -25,14 +25,4 @@ export class BlogController {
     deleteBlog(@Param('id') id: number) {
         return this.blogService.deleteBlog(id);
     }
-
-    @Patch(':id/like')
-    likeBlog(@Param('id') id: string) {
-        return this.blogService.likeBlog(Number(id));
-    }
-
-    @Patch(':id/unlike')
-    unlikeBlog(@Param('id') id: string) {
-        return this.blogService.unlikeBlog(Number(id));
-    }
 }
