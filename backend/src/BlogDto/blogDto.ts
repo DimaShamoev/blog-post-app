@@ -4,7 +4,7 @@ export interface IUserBlog {
     CreatorId: string;
     creatorName: string;
     blogLike: number;
-    userImgUrl: string
+    userImgUrl: string,
 }
 
 export interface IBlog extends IUserBlog {

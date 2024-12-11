@@ -7,11 +7,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
 
 const Header: React.FunctionComponent = () => {
-    const { asideState, setAsideState } = useAside();
+    const { setAsideState } = useAside();
 
     const navigate = useNavigate() 
-
-    console.log(asideState)
 
     return (
         <header className="header">

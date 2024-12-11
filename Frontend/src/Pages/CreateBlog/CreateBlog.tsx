@@ -5,11 +5,8 @@ import { UserButton, useUser } from "@clerk/clerk-react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
 import axios from "axios";
-// import { useSelector } from "react-redux";
-// import { RootState } from "../../Store/Store";
 
 const CreateBlog: React.FunctionComponent = () => {
-    // const likesCnt = useSelector((state: RootState) => state.blogLike.cnt)
 
     const { user } = useUser();
     const navigate = useNavigate();
@@ -37,8 +34,7 @@ const CreateBlog: React.FunctionComponent = () => {
                 userImgUrl: user?.imageUrl
 
             });
-
-            console.log("Blog created:", response.data);
+            
             navigate("/profile");
         } catch (error) {
             alert(`Error creating blog: ${error}`);

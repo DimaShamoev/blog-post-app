@@ -8,7 +8,9 @@ import "./BlogPage.scss"
 const BlogPage: React.FunctionComponent = () => {
 
     const { id } = useParams<{ id: string }>();
+
     const [blog, setBlog] = React.useState<IBlog | null>(null);
+
 
     React.useEffect(() => {
         const fetchBlog = async () => {
@@ -37,9 +39,9 @@ const BlogPage: React.FunctionComponent = () => {
                     </div>
                     
                     <div className="blog-info">
-                        <div className="reacts">
-                                {/* Add likes logic  */}
-                        </div>
+                    <div className="reacts">
+
+                    </div>
 
                         <div className="blog-creator">
                             <p>Created By: </p>
