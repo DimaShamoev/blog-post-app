@@ -60,4 +60,5 @@ https://bloggingspace.netlify.app/
 ### Future Plans
 - Connect with database
 - Change UI
-- Expand Functionality 
+- Expand Functionality
+- Visit pages
