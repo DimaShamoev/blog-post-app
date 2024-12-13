@@ -13,7 +13,7 @@ const AllBlogs: React.FunctionComponent = () => {
     React.useEffect(() => {
         const fetching = async () => {
             try {
-                const res = await axios.get("https://spaceblog-a6he.onrender.com/blog");
+                const res = await axios.get("http://localhost:3000/blog");
                 setBlogs(res.data);
             } catch (err) {
                 alert(`Can't Fetch: ${err}`);
@@ -25,7 +25,7 @@ const AllBlogs: React.FunctionComponent = () => {
 
     const handleDelete = async (blogId: number) => {
         try {
-            await axios.delete(`https://spaceblog-a6he.onrender.com/blog/${blogId}`);
+            await axios.delete(`http://localhost:3000/blog/${blogId}`);
             setBlogs((prevBlogs) => prevBlogs.filter((blog) => blog.id !== blogId));
         } catch (err) {
             console.error("Error deleting blog:", err);

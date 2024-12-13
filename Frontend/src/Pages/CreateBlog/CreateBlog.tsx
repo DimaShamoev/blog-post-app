@@ -25,7 +25,7 @@ const CreateBlog: React.FunctionComponent = () => {
 
     const onSubmit = async (data: IFormData) => {
         try {
-            await axios.post("https://spaceblog-a6he.onrender.com/blog", {
+            await axios.post("http://localhost:3000/blog", {
                 title: data.title,
                 content: data.content,
                 blogType: data.blogType,
