@@ -6,7 +6,6 @@ export class BlogService {
     private Blogs: IBlog[] = [];
     private currentID = 1;
     private date = `${new Date().getDate()} / ${new Date().getMonth() + 1} / ${new Date().getFullYear()}`;
-    private likeCnt = 0;
 
     findAll() {
         return this.Blogs;

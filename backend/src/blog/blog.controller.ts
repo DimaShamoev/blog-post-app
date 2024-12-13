@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, ParseIntPipe, Patch, Post } from '@nestjs/common';
 import { BlogService } from './blog.service';
 import { IUserBlog } from 'src/BlogDto/blogDto';
 
@@ -22,7 +22,7 @@ export class BlogController {
     }
 
     @Delete(':id')
-    deleteBlog(@Param('id') id: number) {
+    deleteBlog(@Param('id', ParseIntPipe) id: number) {
         return this.blogService.deleteBlog(id);
     }
 }
