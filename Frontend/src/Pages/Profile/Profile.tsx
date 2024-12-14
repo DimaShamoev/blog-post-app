@@ -22,10 +22,8 @@ const Profile: React.FunctionComponent = () => {
         fetchBlogs();
     }, []);
 
-    const blogs = React.useMemo(
-        () => userBlogs.filter((blog) => blog.creatorId === user?.id),
-        [userBlogs, user]
-    );
+    const blogs = React.useMemo(() => userBlogs.filter((blog) => blog.creatorId === user?.id),
+        [userBlogs, user]);
 
     return (
         <div className="profile-page-container">
@@ -51,7 +49,7 @@ const Profile: React.FunctionComponent = () => {
                                         <Link to={`/blog/${blog.id}`} >{blog.title}</Link>
                                     </div>
                                     <div className="blog-content">
-                                        {blog.content.split(" ").slice(0, 10).join(" ")}...
+                                    {blog.content.length > 10 ? blog.content.split(" ").slice(0, 10).join(" ") + "..." : blog.content}
                                     </div>
                                 </div>
                             ))}

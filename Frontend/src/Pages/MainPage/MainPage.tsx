@@ -17,10 +17,10 @@ const MainPage: React.FunctionComponent = () => {
         setOpenAside(false)
     }
 
-    const handleOpenModal = () => {
+    const handleOpenModal = (): void => {
         setModal(true)
     }
-    const handleCloseModal = () => {
+    const handleCloseModal = (): void => {
         setModal(false)
     }
 

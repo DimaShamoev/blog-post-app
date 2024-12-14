@@ -32,7 +32,7 @@ const AllBlogs: React.FunctionComponent = () => {
         }
     };
 
-    const isOwner = (creatorId: string) => user?.id === creatorId;
+    const isOwner = (creatorId: string): boolean => user?.id === creatorId;
 
     const toggleParamClick = (blogId: number) => {
         setClickedParam((prev) => (prev === blogId ? null : blogId));
@@ -62,7 +62,7 @@ const AllBlogs: React.FunctionComponent = () => {
                         '' }
                     </div>
                     <div className="blog-content">
-                        {blog.content.split(" ").slice(0, 10).join(" ")}...
+                        {blog.content.length > 10 ? blog.content.split(" ").slice(0, 10).join(" ") + "..." : blog.content}
                     </div>
                     <div className="blog-info">
                         <div className="blog-upload-time">
