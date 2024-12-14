@@ -85,19 +85,11 @@ const MainPage: React.FunctionComponent = () => {
                         <div className={`page-lists-block`}>
                             <ul>
                                 <li onClick={handleOpenModal}><a href="#"><span><FaPenAlt /></span> Write</a></li>
-                                <li><a href="#"><span><FaUser /></span> Sign In</a></li>
-                                <li><a href="#"><span><FaRunning /></span> Get Started</a></li>
+                                <li onClick={handleOpenModal}><a href="#"><span><FaUser /></span> Sign In</a></li>
+                                <li onClick={handleOpenModal}><a href="#"><span><FaRunning /></span> Get Started</a></li>
                             </ul>
                         </div>
                     </div>
-
-                    {/* <div className={`sign-up-modal ${Modal ? 'active' : ''}`}>
-                        <div onClick={handleCloseModal} className="overlay"></div>
-                        <div className="modal-wrapper">
-                            <SignUp />
-                        </div>
-                    </div> */}
-
                 </div>
             </div>
         </div>

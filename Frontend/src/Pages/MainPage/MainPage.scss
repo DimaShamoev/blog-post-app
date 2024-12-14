@@ -192,39 +192,6 @@
         .aside-menu-block.active {
             right: 0;
         }
-
-        // .sign-up-modal {
-        //     position: absolute;
-        //     inset: 0;
-        //     min-height: 100vh;
-        //     background-color: rgba(0, 0, 0, 0.9);
-        //     z-index: -1;
-        //     overflow: hidden;
-        //     transition: .5s ease-in-out;
-
-        //     .overlay {
-        //         position: absolute;
-        //         inset: 0;
-        //     }
-
-        //     .modal-wrapper {
-        //         position: absolute;
-        //         left: 50%;
-        //         top: 50%;
-        //         transform: translate(-50%, -0%);
-        //         transition: .5s ease-in-out;
-        //     }
-
-
-        // }
-
-        // .sign-up-modal.active {
-        //     z-index: 1;
-
-        //     .modal-wrapper {
-        //         transform: translate(-50%, -50%);
-        //     }
-        // }
     }
 }
 
