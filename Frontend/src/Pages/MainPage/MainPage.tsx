@@ -26,6 +26,12 @@ const MainPage: React.FunctionComponent = () => {
 
     return (
         <div className="home-container">
+            <div className={`sign-up-modal ${Modal ? 'active' : ''}`}>
+                        <div onClick={handleCloseModal} className="overlay"></div>
+                        <div className="modal-wrapper">
+                            <SignUp />
+                        </div>
+                    </div>
             <div className="container">
                 <div className="home-container-wrapper">
                     <header className="header">
@@ -85,12 +91,12 @@ const MainPage: React.FunctionComponent = () => {
                         </div>
                     </div>
 
-                    <div className={`sign-up-modal ${Modal ? 'active' : ''}`}>
+                    {/* <div className={`sign-up-modal ${Modal ? 'active' : ''}`}>
                         <div onClick={handleCloseModal} className="overlay"></div>
                         <div className="modal-wrapper">
                             <SignUp />
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>

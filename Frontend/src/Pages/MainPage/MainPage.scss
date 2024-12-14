@@ -1,6 +1,41 @@
 .home-container {
     background-color: #F7F4ED;
     height: 100svh;
+    position: relative;
+    overflow: hidden;
+
+    .sign-up-modal {
+        position: absolute;
+        inset: 0;
+        min-height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: -1;
+        overflow: hidden;
+        transition: .2s ease-in-out;
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+        }
+
+        .modal-wrapper {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -0%);
+            transition: .5s ease-in-out;
+        }
+
+
+    }
+
+    .sign-up-modal.active {
+        z-index: 1;
+
+        .modal-wrapper {
+            transform: translate(-50%, -50%);
+        }
+    }
 
     .home-container-wrapper {
         position: relative;
@@ -86,6 +121,8 @@
                 color: white;
                 padding: 5px 10px;
                 border-radius: 50px;
+                z-index: 0;
+                position: relative;
             }
 
             .img-block {
@@ -94,6 +131,7 @@
                     top: 50%;
                     transform: translateY(-50%);
                     right: 0;
+                    z-index: -0.009
                 }
             }
 
@@ -155,38 +193,38 @@
             right: 0;
         }
 
-        .sign-up-modal {
-            position: absolute;
-            inset: 0;
-            min-height: 100vh;
-            background-color: rgba(0, 0, 0, 0.9);
-            z-index: -1;
-            overflow: hidden;
-            transition: .5s ease-in-out;
+        // .sign-up-modal {
+        //     position: absolute;
+        //     inset: 0;
+        //     min-height: 100vh;
+        //     background-color: rgba(0, 0, 0, 0.9);
+        //     z-index: -1;
+        //     overflow: hidden;
+        //     transition: .5s ease-in-out;
 
-            .overlay {
-                position: absolute;
-                inset: 0;
-            }
+        //     .overlay {
+        //         position: absolute;
+        //         inset: 0;
+        //     }
 
-            .modal-wrapper {
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -0%);
-                transition: .5s ease-in-out;
-            }
+        //     .modal-wrapper {
+        //         position: absolute;
+        //         left: 50%;
+        //         top: 50%;
+        //         transform: translate(-50%, -0%);
+        //         transition: .5s ease-in-out;
+        //     }
 
 
-        }
+        // }
 
-        .sign-up-modal.active {
-            z-index: 1;
+        // .sign-up-modal.active {
+        //     z-index: 1;
 
-            .modal-wrapper {
-                transform: translate(-50%, -50%);
-            }
-        }
+        //     .modal-wrapper {
+        //         transform: translate(-50%, -50%);
+        //     }
+        // }
     }
 }
 
