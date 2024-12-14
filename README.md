@@ -54,11 +54,11 @@ $ cd frontend
 $ npm run dev
 ```
 
-### 🏁 Final Version 🏁
-https://bloggingspace.netlify.app/
-
 ### Future Plans
 - Connect with database
 - Change UI
 - Expand Functionality
 - Visit pages
+
+### 🏁 Final Version 🏁
+https://bloggingspace.netlify.app/
