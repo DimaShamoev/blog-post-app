@@ -10,6 +10,7 @@ const AllBlogs: React.FunctionComponent = () => {
     const { user } = useUser()
     const [clickedParam, setClickedParam] = React.useState<number | null>(null)
 
+
     React.useEffect(() => {
         const fetching = async () => {
             try {
@@ -19,9 +20,12 @@ const AllBlogs: React.FunctionComponent = () => {
                 alert(`Can't Fetch: ${err}`);
             }
         };
-
+        
+        
         fetching();
+
     }, []);
+    
 
     const handleDelete = async (blogId: number) => {
         try {
