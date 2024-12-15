@@ -20,10 +20,8 @@ const AllBlogs: React.FunctionComponent = () => {
                 alert(`Can't Fetch: ${err}`);
             }
         };
-        
-        
+    
         fetching();
-
     }, []);
     
 
@@ -41,6 +39,7 @@ const AllBlogs: React.FunctionComponent = () => {
     const toggleParamClick = (blogId: number) => {
         setClickedParam((prev) => (prev === blogId ? null : blogId));
     };
+
 
     return (
         <div className="content-block">
