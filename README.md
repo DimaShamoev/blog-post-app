@@ -58,7 +58,7 @@ $ npm run dev
 - Connect with database
 - Change UI
 - Expand Functionality
-- Visit pages
+- Visit users pages
 
 ### 🏁 Final Version 🏁
 https://bloggingspace.netlify.app/
