@@ -59,6 +59,7 @@ $ npm run dev
 - Change UI
 - Expand Functionality
 - Visit users pages
+- Add skeleton preloader
 
 ### 🏁 Final Version 🏁
 https://bloggingspace.netlify.app/
